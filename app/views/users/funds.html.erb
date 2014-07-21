@@ -1,0 +1,256 @@
+
+<%= render "layouts/header" %>
+
+<div class="row">
+  <div class="col-md-3 placeholder"><img class="img-responsive" alt="200x200" data-src="holder.js/200x200/auto/sky" src="https://www.virtus.com/vsitemanager/upload/images/logos/f-squared.jpg"></div>
+  <div class="col-md-9">
+
+  	<h1>F-Squared</h1>
+<p class="intro"><i>F-Squared is a quantitatively based boutique investment firm.</i></p>
+<p>
+The firm's innovative business model delivers scalable, transparent investment strategies and customizable capabilities to meet investor needs.  F-Squared strives to deliver long-term outperformance while attempting to avoid short-term performance disappointments.  
+
+</p>
+  </div>
+</div>
+
+
+<div class="row">
+	<div class="col-md-3"><a target="_blank" href="http://alphasectorrotation.com/">&nbsp;&nbsp;&nbsp;&nbsp;» Visit firm's Web site</a><br>
+
+	<div class="feature">
+<h3>Featured Strategies:</h3>
+<ul>
+<li>
+<a target="_blank" href="http://f-squaredinvestments.com/wp-content/uploads/2014/07/03_PremiumIndex_07.pdf">
+Alpha Sector Premium Fact Sheet
+</a>
+</li>
+<li>
+<a target="_blank" href="http://f-squaredinvestments.com/wp-content/uploads/2014/01/AlphaSector-Premium-Index-06302014.pdf">
+Alpha Sectore Premium Performance Evaluation
+</a>
+</li>
+<li>
+<a target="_blank" href="http://f-squaredinvestments.com/wp-content/uploads/2013/11/ASP-Brochure-2-7.pdf">
+Alpha Sector Premium Brochure
+</a>
+</li>
+<li>
+<a target="_blank" href="http://f-squaredinvestments.com/wp-content/uploads/2014/07/AlphaSector-Premium-Index-Q2-14.07.09final.pdf">
+Alpha Sector Premium Quarterly Commentary
+</a>
+</li>
+</ul>
+</div>
+
+	</div>
+  <div class="col-md-9">The F-Squared Premium AlphaSector® Index seeks to help meet the real needs of individual investors
+by participating in rising markets while placing an emphasis on preserving capital during severe and 
+extended market declines. The Fund has an investment objective of long-term capital appreciation 
+and strives to outperform the S&P 500® Index over market cycles while also seeking to deliver lower 
+volatility, low beta, and low correlation. The F-Squared Premium AlphaSector® Index employs a flexible, 
+proprietary quantitative model which can invest in any combination of the nine primary sectors of the S&P 
+500®, a combination of sectors and cash equivalents, or 100% cash equivalents. Utilizes a proprietary 
+quantitative model that seeks to evaluate “true” price trends within each sector, while eliminating market 
+noise.1The model features an innovative, dynamic volatility factor that heightens the sensitivity of the 
+model signals in periods of rising or high volatility.
+<br>
+
+<!-- Button trigger modal -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Invest
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">F-Squared</h4>
+      </div>
+      <div class="modal-body">
+        How much to invest?
+        <div class="left-inner-addon">
+        <span>$</span>
+        <input class="form-control" placeholder="Investment Amount" id="invest" autofocus="" type="invest">
+    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <%= link_to "Invest", invest_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+</div>
+
+<br>
+
+
+<table class="table table-striped table-bordered">
+  <tr>
+  	<th>YTD</th>
+  	<th>2008</th>
+  	<th>2009</th>
+  	<th>2010</th>
+  	<th>2011</th>
+  	<th>2012</th>
+  	<th>2013</th>
+  </tr>
+  <tr>
+  	<td>AlphaSector</td>
+  	<td>-3.12%</td>
+  	<td>32.31%</td>
+  	<td>17.72%</td>
+  	<td>1.69%</td>
+  	<td>15.51%</td>
+  	<td>32.87%</td>
+  </tr>
+  <tr>
+  	<td>S&P 500</td>
+  	<td>-21.94%</td>
+  	<td>26.46%</td>
+  	<td>15.06%</td>
+  	<td>2.11%</td>
+  	<td>16.00%</td>
+  	<td>32.39%</td>
+  </tr>
+</table>
+
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<script>
+
+$(function () {
+        $('#container').highcharts({
+            title: {
+                text: 'Yearly Returns',
+                x: -20 //center
+            },
+            xAxis: {
+                categories: ['2008', '2009', '2010', '2011', '2012', '2013']
+            },
+            yAxis: {
+                title: {
+                    text: 'Percentage'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+            series: [{
+                name: 'Alpha Sector',
+                data: [-3.12, 32.31, , 17.72, 1.69, 15.51, 32.87]
+            }, {
+                name: 'S&P 500',
+                data: [-21.94, 26.46, 15.06, 2.11, 16.0, 32.39]
+            }]
+        });
+    });
+    
+
+
+</script>
+
+
+<div id="container2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<script>
+
+$(function () {
+        $('#container2').highcharts({
+            title: {
+                text: 'Yearly Returns',
+                x: -20 //center
+            },
+            xAxis: {
+                categories: ['2008', '2009', '2010', '2011', '2012', '2013']
+            },
+            yAxis: {
+                title: {
+                    text: 'Dollars'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+            series: [{
+                name: 'Alpha Sector Gross',
+                data: [968800.00, 1281819.28, 1508957.66, 1534459.04, 1772453.64, 2355059.15]
+            }, {
+                name: 'Alpha Sector (Net .8%)',
+                data: [961049.60, 1261392.21, 1473031.62, 1485942.45, 1702680.82, 2244253.19 ]
+            }, {
+                name: 'Alpha Sector (Net 3%)',
+                data: [939736.00, 1206063.76 ,1377184.91 ,1358445.56 ,1522066.25 ,1961698.34 ]
+            }, {
+                name: 'S&P 500 Gross',
+                data: [ 780600.00 ,987146.76 ,1135811.06 ,1159776.68 ,1345340.94 ,1781096.88 ]
+            }, {
+                name: 'Alpha Sector (Net .925% TD Ameritrade)',
+                data: [ 959838.60 ,1258215.30 ,1467470.22 ,1478466.96 ,1691980.25 ,2227338.92 ]
+            }, {
+                name: 'Alpha Sector (Net .935% Schwab)',
+                data: [ 959741.72 ,1257961.32 ,1467025.91 ,1477870.14 ,1691126.53 ,2225990.38 ]
+            }]
+        });
+    });
+    
+
+
+</script>
+
+
+
+
+<style>
+.left-inner-addon {
+    position: relative;
+}
+.left-inner-addon input {
+    padding-left: 22px;    
+}
+.left-inner-addon span {
+    position: absolute;
+    padding: 7px 12px;
+    pointer-events: none;
+}
+
+.right-inner-addon {
+    position: relative;
+}
+.right-inner-addon input {
+    padding-right: 30px;    
+}
+.right-inner-addon span {
+    position: absolute;
+    right: 0px;
+    padding: 7px 12px;
+    pointer-events: none;
+}
+</style>
+

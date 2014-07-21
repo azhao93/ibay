@@ -1,0 +1,28 @@
+
+        <%= stylesheet_link_tag    "application", :media => "all" %>
+        <%= stylesheet_link_tag params[:controller] %>    
+
+    <div class="container">
+
+      <form class="form-signin" role="form">
+        <h2 class="form-signin-heading black">Please sign in</h2>
+        <input class="form-control" placeholder="Email address" id="email" autofocus="" type="email">
+        <input class="form-control" placeholder="Password" id="password" type="password">
+        <div class="checkbox">
+          <label>
+            <div class="black"><input value="remember-me" type="checkbox"> Remember me</div>
+          </label>
+        </div>
+        <%= link_to "Sign in", profile_path, class: "btn btn-lg btn-primary btn-block" %>
+      </form>
+
+      <%= link_to "Register", new_user_path, class: "btn btn-lg btn-primary" %>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  
+
