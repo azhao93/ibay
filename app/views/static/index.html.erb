@@ -1,7 +1,4 @@
 
-  
-    <%= stylesheet_link_tag    "application", :media => "all" %>
-<%= stylesheet_link_tag params[:controller] %>    
 
     <div class="site-wrapper">
 
@@ -49,3 +46,111 @@
   
 
 <div data-original-title="Copy to clipboard" title="" style="position: absolute; left: 0px; top: -9999px; width: 15px; height: 15px; z-index: 999999999;" class="global-zeroclipboard-container" id="global-zeroclipboard-html-bridge">      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="global-zeroclipboard-flash-bridge" height="100%" width="100%">         <param name="movie" value="/assets/flash/ZeroClipboard.swf?noCache=1405723468691">         <param name="allowScriptAccess" value="sameDomain">         <param name="scale" value="exactfit">         <param name="loop" value="false">         <param name="menu" value="false">         <param name="quality" value="best">         <param name="bgcolor" value="#ffffff">         <param name="wmode" value="transparent">         <param name="flashvars" value="trustedOrigins=getbootstrap.com%2C%2F%2Fgetbootstrap.com%2Chttp%3A%2F%2Fgetbootstrap.com">         <embed src="/assets/flash/ZeroClipboard.swf?noCache=1405723468691" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="global-zeroclipboard-flash-bridge" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="trustedOrigins=getbootstrap.com%2C%2F%2Fgetbootstrap.com%2Chttp%3A%2F%2Fgetbootstrap.com" scale="exactfit" height="100%" width="100%">                </object></div>
+
+
+
+
+<style>
+a, a:focus, a:hover {
+    color: #fff;
+}
+.btn-default, .btn-default:hover, .btn-default:focus {
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #333;
+    text-shadow: none;
+}
+html, body {
+    background-color: #333;
+    height: 100%;
+}
+body {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+.site-wrapper {
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5) inset;
+    display: table;
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+}
+.site-wrapper-inner {
+    display: table-cell;
+    vertical-align: top;
+}
+.cover-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+.inner {
+    padding: 30px;
+}
+.masthead-brand {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.masthead-nav > li {
+    display: inline-block;
+}
+.masthead-nav > li + li {
+    margin-left: 20px;
+}
+.masthead-nav > li > a {
+    border-bottom: 2px solid transparent;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 0;
+    padding-right: 0;
+}
+.masthead-nav > li > a:hover, .masthead-nav > li > a:focus {
+    background-color: transparent;
+    border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+.masthead-nav > .active > a, .masthead-nav > .active > a:hover, .masthead-nav > .active > a:focus {
+    border-bottom-color: #fff;
+    color: #fff;
+}
+@media (min-width: 768px) {
+.masthead-brand {
+    float: left;
+}
+.masthead-nav {
+    float: right;
+}
+}
+.cover {
+    padding: 0 20px;
+}
+.cover .btn-lg {
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.mastfoot {
+    color: rgba(255, 255, 255, 0.5);
+}
+@media (min-width: 768px) {
+.masthead {
+    position: fixed;
+    top: 0;
+}
+.mastfoot {
+    bottom: 0;
+    position: fixed;
+}
+.site-wrapper-inner {
+    vertical-align: middle;
+}
+.masthead, .mastfoot, .cover-container {
+    width: 100%;
+}
+}
+@media (min-width: 992px) {
+.masthead, .mastfoot, .cover-container {
+    width: 700px;
+}
+}
+
+</style>
