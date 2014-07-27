@@ -132,7 +132,7 @@ model signals in periods of rising or high volatility.
 $(function () {
         $('#container').highcharts({
             title: {
-                text: 'Yearly Returns',
+                text: 'Calendar Year Returns',
                 x: -20 //center
             },
             xAxis: {
@@ -176,7 +176,7 @@ $(function () {
 $(function () {
         $('#container2').highcharts({
             title: {
-                text: 'Yearly Returns',
+                text: 'One million dollars invested in 2008',
                 x: -20 //center
             },
             xAxis: {
@@ -210,12 +210,6 @@ $(function () {
             }, {
                 name: 'S&P 500 Gross',
                 data: [ 780600.00 ,987146.76 ,1135811.06 ,1159776.68 ,1345340.94 ,1781096.88 ]
-            }, {
-                name: 'Alpha Sector (Net .925% TD Ameritrade)',
-                data: [ 959838.60 ,1258215.30 ,1467470.22 ,1478466.96 ,1691980.25 ,2227338.92 ]
-            }, {
-                name: 'Alpha Sector (Net .935% Schwab)',
-                data: [ 959741.72 ,1257961.32 ,1467025.91 ,1477870.14 ,1691126.53 ,2225990.38 ]
             }]
         });
     });

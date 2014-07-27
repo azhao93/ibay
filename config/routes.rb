@@ -62,5 +62,6 @@ Ibay::Application.routes.draw do
   get 'profile', to: 'users#profile'
   get 'funds', to: 'users#funds'
   get 'invest', to: 'users#invest'
+  get 'listoffunds', to: 'users#listoffunds'
 
 end

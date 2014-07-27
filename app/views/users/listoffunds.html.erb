@@ -1,0 +1,20 @@
+ 
+<%= render "layouts/header" %>
+
+<h1>List of Funds</h1>
+<table class="table table-striped">
+	<tr>
+		<th>Funds (Average Annual Returns %)</th>
+		<th>1 Year</th>
+		<th>3 Year</th>
+		<th>5 Year</th>
+		<th>Since Inception</th>
+	</tr>
+  	<tr>
+  		<td><%= link_to "F-Squared ", funds_path, class: "btn btn-primary" %></td>
+  		<td>26.81</td>
+  		<td>16.53</td>
+  		<td>19.95</td>
+  		<td>17.74</td>
+  	</tr>
+</table>
